@@ -8,7 +8,6 @@ class HeaderTypes extends StatefulWidget {
 class _HeaderTypeState extends State<HeaderTypes> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Column(
       children: <Widget>[
         Icon(

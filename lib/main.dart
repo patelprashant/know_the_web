@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:know_the_web/headerTypeList/header_types.dart';
+import 'package:know_the_web/httpMethodList/http_methods.dart';
 
-import 'header_types.dart';
-import 'http_methods.dart';
-import 'status_codes.dart';
+import 'statusCodeList/status_codes_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   var _selectedIndex = 0;
   final _widgetOptions = [
-    StatusCodes(),
+    StatusCodesPage(),
     HttpMethods(),
     HeaderTypes(),
   ];
@@ -42,12 +42,15 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            _widgetOptions.elementAt(_selectedIndex),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              _widgetOptions.elementAt(_selectedIndex),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
