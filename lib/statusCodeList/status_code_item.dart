@@ -8,9 +8,35 @@ class StatusCodeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new ListTile(
-      leading: new Text(_statusCodeModel.code),
-//      title: new Text(_statusCodeModel.phrase),
-    );
+    return new Container(
+        child: new Column(
+      children: <Widget>[
+        ListTile(
+          leading: new Text(
+            _statusCodeModel.code,
+            style: new TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            ),
+          ),
+          title: new Text(
+            _statusCodeModel.phrase,
+            style: new TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          subtitle: new Text(
+            _statusCodeModel.description,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
+          ),
+          isThreeLine: false,
+        ),
+        new Divider(
+          height: 10.0,
+          color: Colors.blueGrey,
+        ),
+      ],
+    ));
   }
 }
