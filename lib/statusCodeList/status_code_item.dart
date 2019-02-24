@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:know_the_web/statusCodeList/model/statusCode.dart';
+import 'package:know_the_web/statusCodeList/status_code_item_detail.dart';
 
 class StatusCodeItem extends StatelessWidget {
   final StatusCodeModel _statusCodeModel;
@@ -31,6 +32,7 @@ class StatusCodeItem extends StatelessWidget {
             maxLines: 2,
           ),
           isThreeLine: false,
+          onTap: () => _navigateToCodeDetail(context, _statusCodeModel),
         ),
         new Divider(
           height: 10.0,
@@ -39,4 +41,11 @@ class StatusCodeItem extends StatelessWidget {
       ],
     ));
   }
+}
+
+_navigateToCodeDetail(BuildContext context, StatusCodeModel code) {
+  MaterialPageRoute route = new MaterialPageRoute(
+      builder: (context) => StatusCodeItemDetail(statusCode: code));
+
+  Navigator.push(context, route);
 }
