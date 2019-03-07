@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:know_the_web/statusCodeList/model/statusCode.dart';
+import 'package:know_the_web/httpMethodList/model/httpMethod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class StatusCodeItemDetail extends StatelessWidget {
-  final StatusCodeModel statusCode;
+class HttpMethodItemDetail extends StatelessWidget {
+  final HttpMethodModel httpMethod;
 
-  StatusCodeItemDetail({Key key, @required this.statusCode}) : super(key: key);
+  const HttpMethodItemDetail({Key key, this.httpMethod}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(statusCode.code),
+        title: Text(httpMethod.method),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -21,10 +21,10 @@ class StatusCodeItemDetail extends StatelessWidget {
           children: <Widget>[
             Container(
               padding: const EdgeInsets.only(bottom: 16.0),
-              child: Text(statusCode.code + " - " + statusCode.phrase,
+              child: Text(httpMethod.method,
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
             ),
-            Text(statusCode.description),
+            Text(httpMethod.description),
             new Divider(
               height: 10.0,
               color: Colors.blueGrey,
@@ -33,7 +33,7 @@ class StatusCodeItemDetail extends StatelessWidget {
               padding: const EdgeInsets.only(top: 16.0),
               child: InkWell(
                 child: Text(
-                  statusCode.spec_title,
+                  httpMethod.spec_title,
                   style: TextStyle(color: Colors.blue, fontSize: 16),
                 ),
                 onTap: _launchUrl,
@@ -46,7 +46,7 @@ class StatusCodeItemDetail extends StatelessWidget {
   }
 
   void _launchUrl() async {
-    final url = statusCode.spec_href;
+    final url = httpMethod.spec_href;
     if (await canLaunch(url)) {
       await launch(url);
     } else {

@@ -1,0 +1,344 @@
+[
+    {
+        "method": "CONNECT",
+        "description": "requests that the recipient establish a tunnel to the destination origin server identified by the request-target and, if successful, thereafter restrict its behavior to blind forwarding of packets, in both directions, until the connection is closed.",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": false,
+        "spec_title": "RFC7231#4.3.6",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.6"
+    },
+    {
+        "method": "DELETE",
+        "description": "requests that the origin server remove the association between the target resource and its current functionality.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": false,
+        "spec_title": "RFC7231#4.3.5",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.5"
+    },
+    {
+        "method": "GET",
+        "description": "requests transfer of a current selected representation for the target resource.",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": true,
+        "spec_title": "RFC7231#4.3.1",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.1"
+    },
+    {
+        "method": "HEAD",
+        "description": "is identical to GET except that the server MUST NOT send a message body in the response (i.e., the response terminates at the end of the header block).",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": true,
+        "spec_title": "RFC7231#4.3.2",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.2"
+    },
+    {
+        "method": "OPTIONS",
+        "description": "requests information about the communication options available on the request/response chain identified by the effective request URI.",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": false,
+        "spec_title": "RFC7231#4.3.7",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.7"
+    },
+    {
+        "method": "POST",
+        "description": "requests that the target resource process the representation enclosed in the request according to the resource's own specific semantics.",
+        "safe": false,
+        "idempotent": false,
+        "cacheable": false,
+        "spec_title": "RFC7231#4.3.3",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.3"
+    },
+    {
+        "method": "PUT",
+        "description": "requests that the state of the target resource be created or replaced with the state defined by the representation enclosed in the request message payload.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": false,
+        "spec_title": "RFC7231#4.3.4",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.4"
+    },
+    {
+        "method": "TRACE",
+        "description": "is used to invoke a remote, application-layer loopback of the request message.",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": false,
+        "spec_title": "RFC7231#4.3.8",
+        "spec_href": "https://tools.ietf.org/html/rfc7231#section-4.3.8"
+    },
+    {
+        "method": "ACL",
+        "description": " The ACL method modifies the access control list (which can be read via the DAV:acl property) of a resource.  Specifically, the ACL method only permits modification to ACEs that are not inherited, and are not protected.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3744#8.1",
+        "spec_href": "https://tools.ietf.org/html/rfc3744#section-8.1"
+    },
+    {
+        "method": "BASELINE-CONTROL",
+        "description": "A collection can be placed under baseline control with a BASELINE-CONTROL request.  When a collection is placed under baseline control, the DAV:version-controlled-configuration property of the collection is set to identify a new version-controlled configuration. This version-controlled configuration can be checked out and then checked in to create a new baseline for that collection.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#12.6",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-12.6"
+    },
+    {
+        "method": "BIND",
+        "description": "The BIND method modifies the collection identified by the Request- URI, by adding a new binding from the segment specified in the BIND body to the resource identified in the BIND body.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC5842#4",
+        "spec_href": "https://tools.ietf.org/html/rfc5842#section-4"
+    },
+    {
+        "method": "CHECKIN",
+        "description": "A CHECKIN request can be applied to a checked-out version-controlled resource to produce a new version whose content and dead properties are copied from the checked-out resource.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#4.4",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-4.4"
+    },
+    {
+        "method": "CHECKOUT",
+        "description": "A CHECKOUT request can be applied to a checked-in version-controlled resource to allow modifications to the content and dead properties of that version-controlled resource.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#4.3",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-4.3"
+    },
+    {
+        "method": "COPY",
+        "description": "The COPY method creates a duplicate of the source resource identified by the Request-URI, in the destination resource identified by the URI in the Destination header.  The Destination header MUST be present. The exact behavior of the COPY method depends on the type of the source resource.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4918#9.8",
+        "spec_href": "https://tools.ietf.org/html/rfc4918#section-9.8"
+    },
+    {
+        "method": "LABEL",
+        "description": "A LABEL request can be applied to a version to modify the labels that select that version.  The case of a label name MUST be preserved when it is stored and retrieved.  When comparing two label names to decide if they match or not, a server SHOULD use a case-sensitive URL- escaped UTF-8 encoded comparison of the two label names.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#8.2",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-8.2"
+    },
+    {
+        "method": "LINK",
+        "description": "The LINK method establishes one or more Link relationships between the existing resource identified by the Request-URI and other existing resources.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC2068#19.6.1.2",
+        "spec_href": "https://tools.ietf.org/html/rfc2068#section-19.6.1.2"
+    },
+    {
+        "method": "LOCK",
+        "description": "The following sections describe the LOCK method, which is used to take out a lock of any access type and to refresh an existing lock. These sections on the LOCK method describe only those semantics that are specific to the LOCK method and are independent of the access type of the lock being requested.",
+        "safe": false,
+        "idempotent": false,
+        "cacheable": "",
+        "spec_title": "RFC4918#9.10",
+        "spec_href": "https://tools.ietf.org/html/rfc4918#section-9.10"
+    },
+    {
+        "method": "MERGE",
+        "description": "The MERGE method performs the logical merge of a specified version (the \"merge source\") into a specified version-controlled resource (the \"merge target\").",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#11.2",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-11.2"
+    },
+    {
+        "method": "MKACTIVITY",
+        "description": "A MKACTIVITY request creates a new activity resource.  A server MAY restrict activity creation to particular collections, but a client can determine the location of these collections from a DAV:activity- collection-set OPTIONS request.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#13.5",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-13.5"
+    },
+    {
+        "method": "MKCALENDAR",
+        "description": "An HTTP request using the MKCALENDAR method creates a new calendar collection resource.  A server MAY restrict calendar collection creation to particular collections.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4791#5.3.1",
+        "spec_href": "https://tools.ietf.org/html/rfc4791#section-5.3.1"
+    },
+    {
+        "method": "MKCOL",
+        "description": "MKCOL creates a new collection resource at the location specified by the Request-URI.  If the Request-URI is already mapped to a resource, then the MKCOL MUST fail.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4918#9.3",
+        "spec_href": "https://tools.ietf.org/html/rfc4918#section-9.3"
+    },
+    {
+        "method": "MKREDIRECTREF",
+        "description": "The MKREDIRECTREF method requests the creation of a redirect reference resource.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4437#6",
+        "spec_href": "https://tools.ietf.org/html/rfc4437#section-6"
+    },
+    {
+        "method": "MKWORKSPACE",
+        "description": "A MKWORKSPACE request creates a new workspace resource.  A server MAY restrict workspace creation to particular collections, but a client can determine the location of these collections from a DAV:workspace-collection-set OPTIONS request.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#6.3",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-6.3"
+    },
+    {
+        "method": "MOVE",
+        "description": "The MOVE operation on a non-collection resource is the logical equivalent of a copy (COPY), followed by consistency maintenance processing, followed by a delete of the source, where all three actions are performed in a single operation.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4918#9.9",
+        "spec_href": "https://tools.ietf.org/html/rfc4918#section-9.9"
+    },
+    {
+        "method": "ORDERPATCH",
+        "description": "The ORDERPATCH method is used to change the ordering semantics of a collection, to change the order of the collection's members in the ordering, or both.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3648#7",
+        "spec_href": "https://tools.ietf.org/html/rfc3648#section-7"
+    },
+    {
+        "method": "PATCH",
+        "description": "requests that a set of changes described in the request entity be applied to the resource identified by the Request-URI.",
+        "safe": false,
+        "idempotent": false,
+        "cacheable": false,
+        "spec_title": "RFC5789",
+        "spec_href": "https://tools.ietf.org/html/rfc5789#section-2"
+    },
+    {
+        "method": "PROPFIND",
+        "description": "The PROPFIND method retrieves properties defined on the resource identified by the Request-URI, if the resource does not have any internal members, or on the resource identified by the Request-URI and potentially its member resources, if the resource is a collection that has internal member URLs.",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4918#9.1",
+        "spec_href": "https://tools.ietf.org/html/rfc4918#section-9.1"
+    },
+    {
+        "method": "PROPPATCH",
+        "description": "The PROPPATCH method processes instructions specified in the request body to set and/or remove properties defined on the resource identified by the Request-URI.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4918#9.2",
+        "spec_href": "https://tools.ietf.org/html/rfc4918#section-9.2"
+    },
+    {
+        "method": "REBIND",
+        "description": "The REBIND method removes a binding to a resource from a collection,and adds a binding to that resource into the collection identified by the Request-URI.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC5842#6",
+        "spec_href": "https://tools.ietf.org/html/rfc5842#section-6"
+    },
+    {
+        "method": "REPORT",
+        "description": "A REPORT request is an extensible mechanism for obtaining information about a resource.  Unlike a resource property, which has a single value, the value of a report can depend on additional information specified in the REPORT request body and in the REPORT request headers.",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#3.6",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-3.6"
+    },
+    {
+        "method": "SEARCH",
+        "description": "The client invokes the SEARCH method to initiate a server-side search.  The body of the request defines the query.  The server MUST emit an entity matching the WebDAV multistatus format",
+        "safe": true,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC5323#2",
+        "spec_href": "https://tools.ietf.org/html/rfc5323#section-2"
+    },
+    {
+        "method": "UNBIND",
+        "description": "The UNBIND method modifies the collection identified by the Request- URI by removing the binding identified by the segment specified in the UNBIND body.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC5842#5",
+        "spec_href": "https://tools.ietf.org/html/rfc5842#section-5"
+    },
+    {
+        "method": "UNCHECKOUT",
+        "description": "An UNCHECKOUT request can be applied to a checked-out version- controlled resource to cancel the CHECKOUT and restore the pre- CHECKOUT state of the version-controlled resource.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#4.5",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-4.5"
+    },
+    {
+        "method": "UNLINK",
+        "description": "The UNLINK method removes one or more Link relationships from the existing resource identified by the Request-URI. These relationships may have been established using the LINK method or by any other method supporting the Link header.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC2068#19.6.1.3",
+        "spec_href": "https://tools.ietf.org/html/rfc2068#section-19.6.1.3"
+    },
+    {
+        "method": "UNLOCK",
+        "description": "The UNLOCK method removes the lock identified by the lock token in the Lock-Token request header.  The Request-URI MUST identify a resource within the scope of the lock.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4918#9.11",
+        "spec_href": "https://tools.ietf.org/html/rfc4918#section-9.11"
+    },
+    {
+        "method": "UPDATE",
+        "description": "The UPDATE method modifies the content and dead properties of a checked-in version-controlled resource (the \"update target\") to be those of a specified version (the \"update source\") from the version history of that version-controlled resource.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#7.1",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-7.1"
+    },
+    {
+        "method": "UPDATEREDIRECTREF",
+        "description": "The UPDATEREDIRECTREF method requests the update of a redirect reference resource. If a UPDATEREDIRECTREF request fails, the server state preceding the request MUST be restored.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC4437#7",
+        "spec_href": "https://tools.ietf.org/html/rfc4437#section-7"
+    },
+    {
+        "method": "VERSION-CONTROL",
+        "description": "A VERSION-CONTROL request can be used to create a version-controlled resource at the request-URL.  It can be applied to a versionable resource or to a version-controlled resource.",
+        "safe": false,
+        "idempotent": true,
+        "cacheable": "",
+        "spec_title": "RFC3253#3.5",
+        "spec_href": "https://tools.ietf.org/html/rfc3253#section-3.5"
+    }
+]
