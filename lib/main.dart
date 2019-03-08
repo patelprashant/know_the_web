@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:know_the_web/headerTypeList/header_types.dart';
+import 'package:know_the_web/headerTypeList/header_types_page.dart';
 import 'package:know_the_web/httpMethodList/http_methods_page.dart';
 
 import 'statusCodeList/status_codes_page.dart';
@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   final _widgetOptions = [
     StatusCodesPage(),
     HttpMethodsPage(),
-    HeaderTypes(),
+    HeaderTypesPage(),
   ];
 
   @override
