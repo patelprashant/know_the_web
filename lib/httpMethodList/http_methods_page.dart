@@ -29,7 +29,7 @@ class HttpMethodsPageState extends State<HttpMethodsPage> {
   }
 
   List<HttpMethodModel> parseJson(String response) {
-    if (response == null) {
+    if (response == "null") {
       return [];
     }
     final parsed =

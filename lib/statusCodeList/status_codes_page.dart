@@ -30,7 +30,7 @@ class StatusCodePageState extends State<StatusCodesPage> {
 }
 
 List<StatusCodeModel> parseJson(String response) {
-  if (response == null) {
+  if (response == "null") {
     return [];
   }
   final parsed = json.decode(response.toString()).cast<Map<String, dynamic>>();

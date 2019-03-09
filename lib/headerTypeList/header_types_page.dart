@@ -29,7 +29,7 @@ class HeaderTypesPageState extends State<HeaderTypesPage> {
   }
 
   List<HeaderTypeModel> parseJson(String response) {
-    if (response == null) {
+    if (response == "null") {
       return [];
     }
     final parsed =
