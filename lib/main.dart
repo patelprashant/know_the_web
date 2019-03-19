@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:know_the_web/aboutPage/about_page.dart';
 import 'package:know_the_web/headerTypeList/header_types_page.dart';
 import 'package:know_the_web/httpMethodList/http_methods_page.dart';
 
@@ -34,6 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     StatusCodesPage(),
     HttpMethodsPage(),
     HeaderTypesPage(),
+    AboutPage(),
   ];
 
   @override
@@ -56,11 +58,32 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.link), title: Text('Status Codes')),
+              icon: Icon(
+                Icons.link,
+                color: Colors.blueAccent,
+              ),
+              title: Text(
+                'Status',
+                style: new TextStyle(color: Colors.blueGrey),
+              )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.http), title: Text('Methods')),
+              icon: Icon(Icons.http, color: Colors.blueAccent),
+              title: Text(
+                'Methods',
+                style: new TextStyle(color: Colors.blueGrey),
+              )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.web), title: Text('Header Types')),
+              icon: Icon(Icons.web, color: Colors.blueAccent),
+              title: Text(
+                'Headers',
+                style: new TextStyle(color: Colors.blueGrey),
+              )),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.description, color: Colors.blueAccent),
+              title: Text(
+                'About',
+                style: new TextStyle(color: Colors.blueGrey),
+              )),
         ],
         currentIndex: _selectedIndex,
         fixedColor: Colors.blueAccent,
