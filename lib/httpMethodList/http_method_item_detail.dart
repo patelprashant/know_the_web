@@ -11,7 +11,7 @@ class HttpMethodItemDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(httpMethod.method),
+        title: Text('Http Method - ${httpMethod.method}'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),

@@ -61,25 +61,29 @@ class _MyHomePageState extends State<MyHomePage> {
         iconSize: 40.0,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              backgroundColor: Colors.blue[600],
+              backgroundColor: Colors.blue[800],
+              activeIcon: Icon(Icons.link, color: Colors.white),
               icon: Icon(Icons.link, color: Colors.lightBlueAccent),
               title: Text(
                 'Status',
                 style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
+            activeIcon: Icon(Icons.http, color: Colors.white),
               icon: Icon(Icons.http, color: Colors.lightBlueAccent),
               title: Text(
                 'Methods',
                 style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
+            activeIcon: Icon(Icons.web, color: Colors.white),
               icon: Icon(Icons.web, color: Colors.lightBlueAccent),
               title: Text(
                 'Headers',
                 style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
+            activeIcon: Icon(Icons.description, color: Colors.white),
               icon: Icon(Icons.description, color: Colors.lightBlueAccent),
               title: Text(
                 'About',

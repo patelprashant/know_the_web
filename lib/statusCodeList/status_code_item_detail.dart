@@ -11,7 +11,7 @@ class StatusCodeItemDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(statusCode.code),
+        title: Text('Status Code - ${statusCode.code}'),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
