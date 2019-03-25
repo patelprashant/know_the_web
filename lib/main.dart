@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Know the Web',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -41,11 +41,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text(widget.title),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.only(
+            top: 8.0, left: 16.0, right: 16.0, bottom: 8.0),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -55,38 +57,36 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: new BottomNavigationBar(
+        iconSize: 40.0,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(
-                Icons.link,
-                color: Colors.blueAccent,
-              ),
+              backgroundColor: Colors.blue[600],
+              icon: Icon(Icons.link, color: Colors.lightBlueAccent),
               title: Text(
                 'Status',
-                style: new TextStyle(color: Colors.blueGrey),
+                style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.http, color: Colors.blueAccent),
+              icon: Icon(Icons.http, color: Colors.lightBlueAccent),
               title: Text(
                 'Methods',
-                style: new TextStyle(color: Colors.blueGrey),
+                style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.web, color: Colors.blueAccent),
+              icon: Icon(Icons.web, color: Colors.lightBlueAccent),
               title: Text(
                 'Headers',
-                style: new TextStyle(color: Colors.blueGrey),
+                style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.description, color: Colors.blueAccent),
+              icon: Icon(Icons.description, color: Colors.lightBlueAccent),
               title: Text(
                 'About',
-                style: new TextStyle(color: Colors.blueGrey),
+                style: new TextStyle(color: Colors.white),
               )),
         ],
         currentIndex: _selectedIndex,
-        fixedColor: Colors.blueAccent,
         onTap: _onItemTapped,
       ),
     );
