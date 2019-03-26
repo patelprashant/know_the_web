@@ -69,6 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
+            backgroundColor: Colors.blue[800],
             activeIcon: Icon(Icons.http, color: Colors.white),
               icon: Icon(Icons.http, color: Colors.lightBlueAccent),
               title: Text(
@@ -76,6 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
+            backgroundColor: Colors.blue[800],
             activeIcon: Icon(Icons.web, color: Colors.white),
               icon: Icon(Icons.web, color: Colors.lightBlueAccent),
               title: Text(
@@ -83,6 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 style: new TextStyle(color: Colors.white),
               )),
           BottomNavigationBarItem(
+            backgroundColor: Colors.blue[800],
             activeIcon: Icon(Icons.description, color: Colors.white),
               icon: Icon(Icons.description, color: Colors.lightBlueAccent),
               title: Text(

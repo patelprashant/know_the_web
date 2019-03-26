@@ -5,7 +5,8 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Expanded(
-        flex: 1,
+      flex: 1,
+      child: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             new Align(
@@ -83,6 +84,8 @@ class AboutPage extends StatelessWidget {
               color: Colors.blueGrey,
             ),
           ],
-        ));
+        ),
+      ),
+    );
   }
 }
